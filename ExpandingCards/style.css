@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../.fonts/SamsungSans-Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../.fonts/SamsungSans-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../.fonts/SamsungSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../.fonts/SamsungSans-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../.fonts/SamsungSans-Bold.woff') format('woff');
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Samsung Sans', monospace, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    max-width: 1320px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow: hidden;
+
+}
+.panel {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    aspect-ratio: 8/3;
+    overflow: hidden;
+    gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        display: none !important;
+    }
+}
+
+.card {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex: 1;
+    transition: flex 0.7s ease-in;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card h3 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 1.25rem 1.75rem;
+    font-weight: 400;
+    color: white;
+    opacity: 0;
+}
+.card.active {
+    flex: 60%;
+}
+.card.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}

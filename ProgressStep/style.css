@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../.fonts/SamsungSans-Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../.fonts/SamsungSans-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../.fonts/SamsungSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../.fonts/SamsungSans-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Samsung Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../.fonts/SamsungSans-Bold.woff') format('woff');
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Samsung Sans', monospace, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1320px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.panel .progress-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 2.75rem;
+}
+.panel .progress-container .line {
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    min-width: 100%;
+    height: 4px;
+    background-color: #dbdbdb;
+    z-index: -1;
+}
+.panel .progress-container .line .progress {
+    display: flex;
+    height: 100%;
+    background-color: #0080ff;
+    width: 0%;
+    transition: 0.4s ease-in;
+}
+.panel .progress-container .circles {
+    display: flex;
+    min-width: 360px;
+    justify-content: space-between;
+}
+.panel .progress-container .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 50%;
+    border: 4px solid #dbdbdb;
+}
+.panel .progress-container .circle.active {
+    border-color: #0080ff;
+    color: #0080ff;
+}
+.button-groups {
+    display: flex;
+    gap: 1rem;
+}
+.button-groups button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    border-radius: 0.5rem;
+    min-width: 120px;
+    outline: none;
+    color: #fff;
+    background-color: #0080ff;
+    border: none;
+    cursor: pointer;
+}
+.button-groups button:hover {
+    background-color: #0078f0;
+}
+.button-groups button:disabled {
+    background-color: #dbdbdb;
+    cursor: default;
+}
